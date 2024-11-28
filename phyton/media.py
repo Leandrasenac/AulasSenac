@@ -7,4 +7,3 @@ M = (valor1 + valor2) / 2
 
 
 print("A média entre ",valor1," e ",valor2, " é ", M)
-print(M)
