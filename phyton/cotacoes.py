@@ -1,4 +1,4 @@
-import tk 
+import tk
 import requests
 from tkinter import *
 
@@ -15,7 +15,7 @@ def pegar_cotacoes():
     Euro: {cotacao_euro}
     BTC: {cotacao_btc}'''
 
-janela = Tk()
+janela = Tk ()
 janela.title("Cotação atual de Moedas")
 texto = Label(janela, text= "Clique no botão para ver as cotações de moedas")
 texto.grid(column=0, row=0, padx=10, pady=10) 
