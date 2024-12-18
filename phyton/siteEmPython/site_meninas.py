@@ -1,10 +1,10 @@
-import os 
-from flask import Flask, render_template, send_from_directory 
+import os
+from flask import Flask, render_template, send_from_directory
 
 # Configurando o diretório dos templates e do app
 template_dir = os.path.abspath("./templates")
 app = Flask(__name__, template_folder=template_dir)
-# router -> leandratreinamentos.com/
+# router -> eduardotreinamenmtos.com/
 # função -> o que você quer exibir naquela página
 # template
 
@@ -22,25 +22,25 @@ def sobre():
 def matricula():
     return render_template("matricula.html")
 
-#Rotas para servir arquivos estáticos na pasta "templates"
-@app.route("/img/<path:filename")
+# Rotas para servir arquivos estáticos na pasta "templates"
+@app.route("/img/<path:filename>")
 def img_static(filename):
     send_from_directory(os.path.join(template_dir, "img"), filename)
 
-@app.route("/css/<path:filename")
+@app.route("/css/<path:filename>")
 def css_static(filename):
     send_from_directory(os.path.join(template_dir, "css"), filename)
 
-@app.route("/js/<path:filename")
+@app.route("/js/<path:filename>")
 def js_static(filename):
     send_from_directory(os.path.join(template_dir, "js"), filename)
 
-@app.route("/video/<path:filename")
+@app.route("/video/<path:filename>")
 def video_static(filename):
     send_from_directory(os.path.join(template_dir, "video"), filename)
 
-
 # colocar o site no ar
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug=True)
+
 
